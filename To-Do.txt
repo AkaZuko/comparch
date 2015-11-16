@@ -1,0 +1,2 @@
+
+[ ] send the function field to the pipeline reg for ALU
