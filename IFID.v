@@ -1,0 +1,1 @@
+module IFID(input clk, input reset, input IFwrite, input IFflush,)

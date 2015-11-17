@@ -9,19 +9,13 @@ module alu( input [31:0] aluIn1, input [31:0] aluIn2, input carry, input [1:0] a
 	begin
 		case(aluOp)
 			2'b00: 	begin
-						aluOut = aluIn1 + aluIn2 + carry;
+						{C,aluOut} = aluIn1 + aluIn2 + carry;
 						
 						// overflow flag
 						if((aluIn1[31] == 1'b1 && aluIn2[1]==1'b1 && aluOut[31]==1'b0) || (aluIn1[31] == 1'b0 && aluIn2[1]==1'b0 && aluOut[31]==1'b1)) 
 							V = 1'b1;
 						else
 							V = 1'b0;
-
-						// carry flag
-						if( (aluIn2[31]==1'b1 || aluIn1[31]==1'b1) && aluOut[31]==1'b0)
-							C = 1'b1;
-						else
-							C = 1'b0;
 						
 						// negative flag
 						if(aluOut<32'd0)
@@ -38,19 +32,13 @@ module alu( input [31:0] aluIn1, input [31:0] aluIn2, input carry, input [1:0] a
 					end
 
 			2'b01: 	begin
-						aluOut = aluIn2 - aluIn1; 
+						{C,aluOut} = aluIn2 - aluIn1; 
 						
 						// overflow flag
 						if((aluIn1[31] == 1'b0 && aluIn2[1]==1'b1 && aluOut[31]==1'b1) || (aluIn1[31] == 1'b1 && aluIn2[1]==1'b0 && aluOut[31]==1'b0)) 
 							V = 1'b1;
 						else
 							V = 1'b0;
-
-						// carry flag ???
-						if( (aluIn2[31]==1'b1 || aluIn1[31]==1'b1) && aluOut[31]==1'b0)
-							C = 1'b1;
-						else
-							C = 1'b0;
 						
 						// negative flag
 						if(aluOut<32'd0)
@@ -91,7 +79,7 @@ module alu( input [31:0] aluIn1, input [31:0] aluIn2, input carry, input [1:0] a
 			  			aluOut = temp[31:0];
 
 			  			// carry flag ???
-						if( (aluIn2[31]==1'b1 || aluIn1[31]==1'b1) && aluOut[31]==1'b0)
+						if( (temp[32]==1'b1)
 							C = 1'b1;
 						else
 							C = 1'b0;
