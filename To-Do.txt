@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 
 [ ] send the function field to the pipeline reg for ALU
+=======
+test
+[ ] send the function field to the pipeline reg for ALU
+>>>>>>> 48f386ad8d77d49dee8b64170e1d6062b44ca041
 [ ] carry flag checking
