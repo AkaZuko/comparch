@@ -13,6 +13,9 @@ module ForwardingUnit(input [2:0] ID_EX_rm_1,
 					 input MEM_WB_RegWrite2,
 					 input [2:0] MEM_WB_rd_2,
 					 input [2:0] EX_MEM_rd_2,
+					 input n1,
+					 input n2,
+					 output n_out,
 					 output reg [1:0] ForwardA1,
 					 output reg [1:0] ForwardA2,
 					 output reg [1:0] ForwardB1,
@@ -94,6 +97,13 @@ module ForwardingUnit(input [2:0] ID_EX_rm_1,
 		begin
 			ForwardD2 = 1'b0;
 		end
+
+
+		// Forward flag
+		if ( MEM_WB_RegWrite2 == 1'b1 )
+			n_out = n2;
+		else if ( !(MEM_WB_RegWrite2 == 1'b1) &&  (EX_MEM_RegWrite1 == 1'b1) )
+			n_out = n1;
 
 		// End forwarding
 
