@@ -79,7 +79,7 @@ module alu( input [31:0] aluIn1, input [31:0] aluIn2, input carry, input [1:0] a
 			  			aluOut = temp[31:0];
 
 			  			// carry flag ???
-						if( (temp[32]==1'b1)
+						if(temp[32]==1'b1)
 							C = 1'b1;
 						else
 							C = 1'b0;
