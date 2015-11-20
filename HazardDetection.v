@@ -4,7 +4,7 @@ module HazardDetectionUnit(input Branch, input ID_EX_RegWrite, output reg IF_ID_
                            input AluSrcB, input [2:0] IF_ID_inst1_Rn, input [2:0] IF_ID_inst1_Rd,
                            input [2:0] IF_ID_inst2_Rm, input [2:0] IF_ID_inst2_Rn, input [2:0] IF_ID_inst2_Rd, input EX_MEM_MemRead);
   // THE ASSUMPTION IS THAT A CHANGE IN THE SENSITIVITY LIST WILL ALWAYS BE THERE
-  always@(Branch, ID_EX_RegWrite, ID_EX_RegWrite2, EX_MEM_RegWrite2, ID_EX_MemRead, ID_EX_Rd2, IF_ID_inst1_Rm, AluSrcB, IF_ID_inst1_Rn, IF_ID_inst1_Rd, IF_ID_inst2_Rm, IF_ID_inst2_Rn, IF_ID_inst2_Rd, EX_MEM_MemRead)
+  always@(Branch, ID_EX_RegWrite1, ID_EX_RegWrite2, EX_MEM_RegWrite2, ID_EX_MemRead, ID_EX_Rd2, IF_ID_inst1_Rm, AluSrcB, IF_ID_inst1_Rn, IF_ID_inst1_Rd, IF_ID_inst2_Rm, IF_ID_inst2_Rn, IF_ID_inst2_Rd, EX_MEM_MemRead)
   begin 
     IF_ID_Write = 1'b1;
     PCWrite = 1'b1;
@@ -71,3 +71,4 @@ module HazardDetectionUnit(input Branch, input ID_EX_RegWrite, output reg IF_ID_
     end
   end
 endmodule
+
