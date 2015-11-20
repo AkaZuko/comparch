@@ -1,4 +1,4 @@
-module halt_tag_array(input clk, input reset, input regWrite, input decOut1b, input input[3:0] inpHaltTag, output[3:0] outHaltTag);
+module halt_tag(input clk, input reset, input regWrite, input decOut1b, input[3:0] inpHaltTag, output[3:0] outHaltTag);
 	
 	D_ff_normal TAG_Halt_D0(clk, reset, regWrite, decOut1b, inpHaltTag[0], outHaltTag[0]);
 	D_ff_normal TAG_Halt_D1(clk, reset, regWrite, decOut1b, inpHaltTag[1], outHaltTag[1]);
@@ -7,7 +7,7 @@ module halt_tag_array(input clk, input reset, input regWrite, input decOut1b, in
 
 endmodule 
 
-module main_tag_array(input clk, input reset, input regWrite, input decOut1b, input input[19:0] inpMainTag, output[19:0] outMainTag);
+module main_tag(input clk, input reset, input regWrite, input decOut1b, input[19:0] inpMainTag, output[19:0] outMainTag);
 	
 	D_ff_normal TAG_Main_D0(clk, reset, regWrite, decOut1b, inpMainTag[0], outMainTag[0]);
 	D_ff_normal TAG_Main_D1(clk, reset, regWrite, decOut1b, inpMainTag[1], outMainTag[1]);
@@ -34,4 +34,9 @@ module main_tag_array(input clk, input reset, input regWrite, input decOut1b, in
 	D_ff_normal TAG_Main_D18(clk, reset, regWrite, decOut1b, inpMainTag[18], outMainTag[18]);
 	D_ff_normal TAG_Main_D19(clk, reset, regWrite, decOut1b, inpMainTag[19], outMainTag[19]);
 
+endmodule
+
+module tag(input clk, input reset, input regWrite, input decOut1b, input[23:0] inp_tag, output[23:0] out_tag);
+	halt_tag HALT_TAG( clk, reset, regWrite, decOut1b, inp_tag[3:0], out_tag[3:0]);
+	main_tag MAIN_TAG( clk, reset, regWrite, decOut1b, inp_tag[23:4], out_tag[23:4]);
 endmodule
