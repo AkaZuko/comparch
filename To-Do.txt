@@ -1,3 +1,4 @@
 
 [ ] send the function field to the pipeline reg for ALU
-[ ] carry flag checking
+[ get rechecked ] carry flag checking
+[ ] PCSrc signal generation
