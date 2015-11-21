@@ -1,18 +1,18 @@
-module ForwardingUnit(input [2:0] ID_EX_rm_1,
-					 input [2:0] EX_MEM_rd_1, 
-					 input MEM_WB_RegWrite1,
-					 input [2:0] MEM_WB_rd_1,
-					 input [2:0] ID_EX_rd_11,
-					 input [2:0] EX_MEM_rd_11,
-					 input ID_EX_ALUSrcB,
-					 input [2:0] ID_EX_rd_12,
-					 input EX_MEM_RegWrite1,
-					 input [2:0] ID_EX_rm_2,
-					 input [2:0] ID_EX_rd_2,
-					 input [2:0] ID_EX_rn_2,
-					 input MEM_WB_RegWrite2,
-					 input [2:0] MEM_WB_rd_2,
-					 input [2:0] EX_MEM_rd_2,
+module ForwardingUnit(input [2:0] ID_EX_rm_1,\
+					 input [2:0] EX_MEM_rd_1,\ 
+					 input MEM_WB_RegWrite1,\
+					 input [2:0] MEM_WB_rd_1,\
+					 input [2:0] ID_EX_rd_11,\
+					 //input [2:0] EX_MEM_rd_11,
+					 input ID_EX_ALUSrcB,\
+					 input [2:0] ID_EX_rd_12,\
+					 input EX_MEM_RegWrite1,\
+					 input [2:0] ID_EX_rm_2,\
+					 input [2:0] ID_EX_rd_2,\
+					 input [2:0] ID_EX_rn_2,\
+					 input MEM_WB_RegWrite2,\
+					 input [2:0] MEM_WB_rd_2,\
+					 input [2:0] EX_MEM_rd_2,\
 					 input n1,
 					 input n2,
 					 output n_out,
@@ -30,7 +30,7 @@ module ForwardingUnit(input [2:0] ID_EX_rm_1,
 			MEM_WB_RegWrite1 or
 			MEM_WB_rd_1 or
 			ID_EX_rd_11 or
-			EX_MEM_rd_11 or
+			//EX_MEM_rd_11 or
 			ID_EX_ALUSrcB or
 			ID_EX_rd_12 or
 			EX_MEM_RegWrite1 or
