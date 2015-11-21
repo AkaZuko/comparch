@@ -3,18 +3,16 @@ module Comparator(input [3:0] inputTag, input [3:0] haltTag, output reg equal);
   always@(inputTag,haltTag )
   begin
   if(inputTag ==haltTag)
-    begin
       equal = 1'b1;
-    end
   else
-    equal = 1'b0;
+      equal = 1'b0;
 end
 endmodule
 
 module mux16to1 ( input [7:0] outR0,outR1,outR2,outR3,outR4,outR5,outR6,outR7,outR8,outR9,outR10,outR11,outR12,outR13,outR14,outR15,outR16,outR17,outR18,outR19,outR20,outR21,outR22,outR23,outR24,outR25,outR26,outR27,outR28,outR29,outR30,outR31, input [4:0] Sel, output reg [7:0] outBus );
 	always@(outR0 or outR1 or outR2 or outR3 or outR4 or outR5 or outR6 or outR7 or outR8 or outR9 or outR10 or outR11 or outR12 or outR13 or outR14 or outR15 or outR16 or outR17 or outR18 or outR19 or outR20 or outR21 or outR22 or outR23 or outR24 or outR25 or outR26 or outR27 or outR28 or outR29 or outR30 or outR31 or Sel)
 	case (Sel)
-		  5'b00000: outBus = outR0;
+		    5'b00000: outBus = outR0;
 			5'b00001: outBus = outR1;
 			5'b00010: outBus = outR2;
 			5'b00011: outBus = outR3;
