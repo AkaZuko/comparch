@@ -1,4 +1,4 @@
-module ex_mem(input clk, input reset, input regWrite1, input regWrite2, input memRead, input memWrite, input muxout,
+module ex_mem(input clk, input reset, input regWrite1, input regWrite2, input muxout,
               input aluOutNFlag, input aluOutZFlag, input aluOutCFlag, input aluOutVFlag,
               input id_exe_regrd2_out,
               input id_exe_rd2_out, input aluOutInput, input adderOut, input memRd_in, input memWt_in,
