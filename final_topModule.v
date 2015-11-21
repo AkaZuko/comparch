@@ -1089,7 +1089,7 @@ IDEX_pipeline p2( clk, reset, Instr1SigOut, Instr2SigOut, SubSExt, Inst1[7:5], I
 //wire [1:0] ForwardA1, ForwardA2,ForwardB1,ForwardB2, ForwardC2,ForwardD2;
 //wire [31:0] aluOut,SrcAMuxOut, FwdB1MuxOut,FwdA1MuxOut,MemAdderOut;
 //wire[2:0] RdSelMuxOut;
-ForwardingUnit fu01(P2_rm1,P3_rd1,P4_RegWrite1, P4_rd1,P2_rd1_1,P2_Instr1SigOut[6],P2_rd1_2,P2_Instr1SigOut[8],P2_rm2,P2_Rd2,P2_rn2,P3_RegWrite2,P4_rd2, P3_rd2, P3_N,P4_N2, n_out,ForwardA1,ForwardA2,ForwardB1,ForwardB2, ForwardC2, ForwardD2);
+ForwardingUnit fu01(P2_rm1,P3_rd1,P4_RegWrite1, P4_rd1,P2_rd1_1,P2_Instr1SigOut[6],P2_rd1_2,P2_Instr1SigOut[8],P2_rm2,P2_Rd2,P2_rn2,P3_RegWrite2,P4_rd2, P3_rd2, P3_N,P4_N2 | P4_N, n_out,ForwardA1,ForwardA2,ForwardB1,ForwardB2, ForwardC2, ForwardD2);
 alu alu01( SrcAMuxOut, FwdB1MuxOut, C,  aluOp, aluOut,  N, Z, C,V);
 adder lwadder01(FwdA2MuxOut, FwdB2MuxOut, MemAdderOut);
 mux4to1_32bits fwda1mux01(P2_Regrm1, P3_aluOut,P4_aluOut,P4_MemOut, ForwardA1, FwdA1MuxOut);
