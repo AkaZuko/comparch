@@ -35,8 +35,3 @@ module main_tag(input clk, input reset, input regWrite, input decOut1b, input[19
 	D_ff_normal TAG_Main_D19(clk, reset, regWrite, decOut1b, inpMainTag[19], outMainTag[19]);
 
 endmodule
-
-module tag(input clk, input reset, input regWrite, input decOut1b, input[23:0] inp_tag, output[23:0] out_tag);
-	halt_tag HALT_TAG( clk, reset, regWrite, decOut1b, inp_tag[3:0], out_tag[3:0]);
-	main_tag MAIN_TAG( clk, reset, regWrite, decOut1b, inp_tag[23:4], out_tag[23:4]);
-endmodule
