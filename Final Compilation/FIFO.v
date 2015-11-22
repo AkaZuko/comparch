@@ -1,34 +1,9 @@
-
-module set(input clk, input reset, input[2:0] lineIndex, input setNo1, input setNo2, input[7:0] data1,input[7:0] data2, output reg calSet, output reg[7:0]  updateSet1, output reg[7:0]  updateSet2  );
-
-  always@(clk, reset, setNo1, setNo2)
-  
-  if(setNo1 == 0 && data1[lineIndex] ==0)
-    begin
-    calSet = 0;
-    updateSet1 = data1;
-    updateSet2 = data2;
-    updateSet1[lineIndex] = 1'b1;
-    end
-    
- else if(setNo2 == 0 && data2[lineIndex] ==0)
-   begin
-     calSet=1;
- 
-     updateSet1 = data1;
-     updateSet2 = data2;
-     updateSet2[lineIndex] = 1'b1;
-    end
-     
-endmodule
-
-module FIFO(input clk, input reset, input[2:0] lineIndex, input hit, output setNo);
+module FIFO(input clk, input reset, input[2:0] lineIndex, input hit, output reg setNo);
   
   wire[7:0] decOut;
   
   wire[7:0] set1Out, set2Out;
-  wire updateSet1, updateSet2;
-  // wire[7:0] set1Out, set2Out, updateSet1, updateSet2;
+  reg updateSet1, updateSet2;
   
   wire setNo1, setNo2;
   
@@ -40,7 +15,27 @@ module FIFO(input clk, input reset, input[2:0] lineIndex, input hit, output setN
   mux8to1_1bit m1(set1Out[0], set1Out[1],set1Out[2],set1Out[3],set1Out[4],set1Out[5],set1Out[6], set1Out[7], lineIndex,setNo1);
   mux8to1_1bit m2(set2Out[0], set2Out[1],set2Out[2],set2Out[3],set2Out[4],set2Out[5],set2Out[6], set2Out[7], lineIndex,setNo2);
 
-  set s1( clk,  reset,  lineIndex,  setNo1,  setNo2, set1Out,set2Out, setNo,  updateSet1,  updateSet2  );
+  always@(lineIndex or hit or setNo1 or setNo2)
+  begin
+  	if ( setNo1 == 1'b1 && setNo2 == 1'b0 )
+  	begin
+  		updateSet1 = 1'b0;
+  		updateSet2 = 1'b1;
+  		setNo = 1'b1;
+  	end
+  	else if ( setNo2 == 1'b1 && setNo1 == 1'b0 )
+  	begin
+  		updateSet1 = 1'b1;
+  		updateSet2 = 1'b0;
+  		setNo = 1'b0;
+  	end
+  	else
+  	begin
+  		updateSet1 = 1'b1;
+  		updateSet2 = 1'b0;
+  		setNo = 1'b0;
+  	end
+  end
    
 endmodule
 
