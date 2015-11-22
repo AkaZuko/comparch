@@ -1,11 +1,16 @@
-module cache_set(input clk, input reset, input regWrite, input[7:0] decOut1b, input inp_viv, input [255:0] inputData,
+module cache_set(input clk, input reset, input hit, input setOut, input memWrite, input[7:0] decOut1b, input inp_viv, input [255:0] inputData,
 				 input[23:0] in_tag,
 				 output reg out_viv,
 				 output[3:0] outHaltTag0, output[3:0] outHaltTag1, output[3:0] outHaltTag2, output[3:0] outHaltTag3,
 				 output[3:0] outHaltTag4, output[3:0] outHaltTag5, output[3:0] outHaltTag6, output[3:0] outHaltTag7,
 				 output reg [19:0] outMainTag, output reg [255:0] outData);
 
-		wire[7:0] w_out_viv;
+		wire [7:0] w_out_viv;
+		wire tempAndOut, regWrite;
+		and setOut_Hit(tempAndOut, setOut, hit);
+		or newRegWrite(regWrite, tempAndOut, memWrite);
+
+
 		valid_invalid_bit VIV_SET0(clk, reset, regWrite, decOut1b[0], inp_viv, w_out_viv[0]);
 		valid_invalid_bit VIV_SET1(clk, reset, regWrite, decOut1b[1], inp_viv, w_out_viv[1]);
 		valid_invalid_bit VIV_SET2(clk, reset, regWrite, decOut1b[2], inp_viv, w_out_viv[2]);
