@@ -71,6 +71,7 @@ module ForwardingUnit(input [2:0] ID_EX_rm_1,
 			ForwardB1 = 2'b11;
 	  else
 			ForwardB1 = 2'b00;
+	
 			// Forward B2
 	  if ( !(EX_MEM_RegWrite1 && (ID_EX_rn_2 == EX_MEM_rd_1)) && MEM_WB_RegWrite1 && (ID_EX_rn_2 == MEM_WB_rd_1) && (EX_MEM_rd_1 != 3'd0) && (MEM_WB_rd_1 != 3'd0))
 			ForwardB2 = 2'b01;
