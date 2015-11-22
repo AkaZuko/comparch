@@ -21,15 +21,15 @@ module cacheModule(input clk, input reset, input [31:0] pcOut,
 	Comparator C6_set0(pcOut[11:8], tag6_set0_H, tag6_set0_equal);
 	Comparator C7_set0(pcOut[11:8], tag7_set0_H, tag7_set0_equal);
 
-	Comparator C0_set1(pcOut[11:8], tag0_set0_H, tag0_set1_equal);
-	Comparator C1_set1(pcOut[11:8], tag1_set0_H, tag1_set1_equal);
-	Comparator C2_set1(pcOut[11:8], tag2_set0_H, tag2_set1_equal);
-	Comparator C3_set1(pcOut[11:8], tag3_set0_H, tag3_set1_equal);
+	Comparator C0_set1(pcOut[11:8], tag0_set1_H, tag0_set1_equal);
+	Comparator C1_set1(pcOut[11:8], tag1_set1_H, tag1_set1_equal);
+	Comparator C2_set1(pcOut[11:8], tag2_set1_H, tag2_set1_equal);
+	Comparator C3_set1(pcOut[11:8], tag3_set1_H, tag3_set1_equal);
 
-	Comparator C4_set1(pcOut[11:8], tag4_set0_H, tag4_set1_equal);
-	Comparator C5_set1(pcOut[11:8], tag5_set0_H, tag5_set1_equal);
-	Comparator C6_set1(pcOut[11:8], tag6_set0_H, tag6_set1_equal);
-	Comparator C7_set1(pcOut[11:8], tag7_set0_H, tag7_set1_equal);
+	Comparator C4_set1(pcOut[11:8], tag4_set1_H, tag4_set1_equal);
+	Comparator C5_set1(pcOut[11:8], tag5_set1_H, tag5_set1_equal);
+	Comparator C6_set1(pcOut[11:8], tag6_set1_H, tag6_set1_equal);
+	Comparator C7_set1(pcOut[11:8], tag7_set1_H, tag7_set1_equal);
 
 	// ........ Cache Set
 
