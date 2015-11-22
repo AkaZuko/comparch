@@ -38,6 +38,7 @@ module ForwardingUnit(input [2:0] ID_EX_rm_1,\
 			ID_EX_rd_2 or
 			ID_EX_rn_2 or
 			MEM_WB_RegWrite2 or
+			EX_MEM_rd_2 or
 			MEM_WB_rd_2)
 	begin
 		// Start forwarding
