@@ -1,5 +1,5 @@
 module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, input[7:0] MemOut, input[255:0] Block, 
-				   output hit, output[7:0] data);
+				   output reg hit, output[7:0] data);
 	
 	wire setOut;
 	wire [7:0] decOut8b;
@@ -53,7 +53,8 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 	wire tag4_set0_equal, tag5_set0_equal, tag6_set0_equal, tag7_set0_equal;
 	wire tag0_set1_equal, tag1_set1_equal, tag2_set1_equal, tag3_set1_equal;
 	wire tag4_set1_equal, tag5_set1_equal, tag6_set1_equal, tag7_set1_equal;
-	wire Equal_Indexed_0, Equal_Indexed_1, enablerSignal, wayHit0, wayHit1, Mux101;
+	wire Equal_Indexed_0, Equal_Indexed_1, enablerSignal, wayHit0, wayHit1;
+	reg Mux101;
 	wire [255:0] outputDataLine;
 	wire [7:0] finalDataBlock;
 
@@ -95,10 +96,11 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 	mainTagChecker mainTagChecker0(pcOut[31:12], tag_set0_M, Equal_Indexed_0, out_viv_set0, wayHit0);
 	mainTagChecker mainTagChecker1(pcOut[31:12], tag_set1_M, Equal_Indexed_1, out_viv_set1, wayHit1);
 	
-	or wayHit_OR(hit, wayHit0, wayHit1);
-
-	and data_AND(Mux101, hit, wayHit1);
-
+	always@(hit or wayHit1 or wayHit0)
+	begin
+		hit = wayHit0|wayHit1;
+		Mux101 = hit&wayHit1;
+	end
 
 	FIFO  fifo_replacement(clk, reset, pcOut[7:5], hit, setOut );
 
@@ -134,8 +136,9 @@ module testbench;
   begin
     clk=0; reset=1; //memWrite=0;inbyte=8'd9;dataBlock=256'h123456;pc=32'h9876ABC0;
     
-    #10  reset=0;   memWrite=1'b0; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062; // read miss,  means : 0110_0010
-    
+    // #10  reset=0;   memWrite=1'b0; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062; // read miss,  means : 0110_0010
+	
+	#10  reset=0;   memWrite=1'b1; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062;    
 
     /*
     #30 memWrite=0;inbyte=8'h77;dataBlock=256'h123456;pc=32'hABCDABC0;       //read miss

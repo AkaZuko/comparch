@@ -83,7 +83,7 @@ module cache_set(input clk, input reset, input hit, input setOut,
 		cache_data DATA_BLOCK_6(clk, reset, block_write|byte_w, decOut1b[6], hit, offset, byte_data, inputData, outData6);
 		cache_data DATA_BLOCK_7(clk, reset, block_write|byte_w, decOut1b[7], hit, offset, byte_data, inputData, outData7);
 
-		always@(decOut1b or inp_viv or inputData or in_tag)
+		always@(decOut1b or inp_viv or inputData or in_tag or hit or setOut)
 		begin
 			case(decOut1b)
 				8'b00000001:begin

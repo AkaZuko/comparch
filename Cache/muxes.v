@@ -21,7 +21,7 @@ endmodule
 
 module mux2to1_1bit(input inp0, input inp1, input sel, output reg muxOut);
 
-	always@(inp0 or inp0 or sel)
+	always@(inp0 or inp1 or sel)
 	begin
 		case (sel)
 			1'b0: muxOut = inp0;
