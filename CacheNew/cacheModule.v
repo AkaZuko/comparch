@@ -1,5 +1,5 @@
-module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, input[7:0] MemOut, input[255:0] Block, 
-				   output reg hit, output[7:0] data);
+module cacheModule(input clk, input reset, input stall, input [31:0] decOutStall, input [31:0] pcOut, input  memWrite, input[7:0] MemOut, input[7:0] Block, 
+				   output reg hit, output [7:0] finalData, output [255:0] outputDataLine);
 	
 	wire setOut;
 	wire [7:0] decOut8b;
@@ -17,13 +17,14 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 	wire[23:0] in_tag;
 	wire[3:0] tag0_set0_H, tag1_set0_H, tag2_set0_H, tag3_set0_H, tag4_set0_H, tag5_set0_H, tag6_set0_H, tag7_set0_H;
 	wire[255:0] outData_set0;
-	wire[19:0] tag_set0_M;
+	wire[19:0] tag_set0_M;	
 
 	// ??? regWrite8b_set0 has to be updated in the cache_set module
 
-	cache_set set0( clk, reset, hit, ~setOut,
+	cache_set set0( clk, reset, hit, stall, ~setOut,
 					memWrite, pcOut[4:0], MemOut,
 					// decOut8b, inp_viv_set0,
+					decOutStall,
 					decOut8b, 1'b1,
 					Block, pcOut[31:8], out_viv_set0,
 					tag0_set0_H, tag1_set0_H, tag2_set0_H, tag3_set0_H, tag4_set0_H, tag5_set0_H, tag6_set0_H, tag7_set0_H,
@@ -35,9 +36,10 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 	wire[19:0] tag_set1_M;
 
 	// ??? regWrite8b_set1 has to be updated in the cache_set module
-	cache_set set1( clk, reset,  hit, setOut,
+	cache_set set1( clk, reset,  hit , stall, setOut,
 					memWrite, pcOut[4:0], MemOut,
 					// decOut8b, inp_viv_set1,
+					decOutStall,
 					decOut8b, 1'b1,
 					Block, pcOut[31:8] , out_viv_set1, 
 					tag0_set1_H, tag1_set1_H, tag2_set1_H, tag3_set1_H, tag4_set1_H, tag5_set1_H, tag6_set1_H, tag7_set1_H,
@@ -53,10 +55,8 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 	wire tag4_set0_equal, tag5_set0_equal, tag6_set0_equal, tag7_set0_equal;
 	wire tag0_set1_equal, tag1_set1_equal, tag2_set1_equal, tag3_set1_equal;
 	wire tag4_set1_equal, tag5_set1_equal, tag6_set1_equal, tag7_set1_equal;
-	wire Equal_Indexed_0, Equal_Indexed_1, enablerSignal, wayHit0, wayHit1;
+	wire Equal_Indexed_0, Equal_Indexed_1, wayHit0, wayHit1;
 	reg Mux101;
-	wire [255:0] outputDataLine;
-	wire [7:0] finalDataBlock;
 
 
 	// Set 0
@@ -108,7 +108,7 @@ module cacheModule(input clk, input reset, input [31:0] pcOut, input  memWrite, 
 
 	// mux64Bto32B muxOutputFetchSelect(outputDataLine, fetchData, hit, finalDataOutput);	// ??? we need to get fetchData from MEM
 
-	muxBlockSelect muxDataBlockSelect(outputDataLine, pcOut[4:0], data);
+	muxBlockSelect muxDataBlockSelect(outputDataLine, pcOut[4:0], finalData);
 
 
 endmodule
@@ -136,17 +136,15 @@ module testbench;
   begin
     clk=0; reset=1; //memWrite=0;inbyte=8'd9;dataBlock=256'h123456;pc=32'h9876ABC0;
     
-    // #10  reset=0;   memWrite=1'b0; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062; // read miss,  means : 0110_0010
+    #10  reset=0;   memWrite=1'b0; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062; // read miss,  means : 0110_0010
 	
-	#10  reset=0;   memWrite=1'b1; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062;    
+	  //#10  reset=0;   memWrite=1'b1; inbyte=8'd9; dataBlock=256'h123456; pc=32'h00a00062;    
 
-    /*
+    
     #30 memWrite=0;inbyte=8'h77;dataBlock=256'h123456;pc=32'hABCDABC0;       //read miss
     #30 memWrite=1;inbyte=8'hAA;pc=32'hABCDABC0;                             //write hit
     #30 memWrite=1;inbyte=8'hBB;dataBlock=256'h666666;pc=32'h12345678;       //write miss
     
-    #40 
-    */
-    // $finish;
+    #40 $finish;
   end
 endmodule 

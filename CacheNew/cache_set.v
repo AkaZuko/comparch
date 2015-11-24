@@ -1,6 +1,7 @@
-module cache_set(input clk, input reset, input hit, input setOut, 
+module cache_set(input clk, input reset, input hit, input stall, input setOut, 
 				 input MemWrite, input[4:0] offset, input[7:0] byte_data,
-				 input[7:0] decOut1b, input inp_viv, input [255:0] inputData,
+				 input [31:0] decOutStall,
+				 input[7:0] decOut1b, input inp_viv, input [7:0] inputData,
 				 input[23:0] in_tag,
 				 output reg out_viv,
 				 output[3:0] outHaltTag0, output[3:0] outHaltTag1, output[3:0] outHaltTag2, output[3:0] outHaltTag3,
@@ -15,7 +16,7 @@ module cache_set(input clk, input reset, input hit, input setOut,
 		reg byte_w,block_write;
 		always@(hit or setOut or MemWrite or inp_viv or offset or byte_data or decOut1b or inputData or in_tag)
 		begin
-			if(hit == 1'b1 && MemWrite==1'b1)
+			if(hit == 1'b1 && MemWrite==1'b1 && stall == 1'b1)
 				begin
 					byte_w = 1'b1;
 					block_write = 1'b0;
@@ -74,14 +75,14 @@ module cache_set(input clk, input reset, input hit, input setOut,
 		main_tag M_TAG7(clk, reset, block_write, decOut1b[7], in_tag[23:4], outMainTag7);
 
 		
-		cache_data DATA_BLOCK_0(clk, reset, block_write|byte_w, decOut1b[0], hit, offset, byte_data, inputData, outData0);
-		cache_data DATA_BLOCK_1(clk, reset, block_write|byte_w, decOut1b[1], hit, offset, byte_data, inputData, outData1);
-		cache_data DATA_BLOCK_2(clk, reset, block_write|byte_w, decOut1b[2], hit, offset, byte_data, inputData, outData2);
-		cache_data DATA_BLOCK_3(clk, reset, block_write|byte_w, decOut1b[3], hit, offset, byte_data, inputData, outData3);
-		cache_data DATA_BLOCK_4(clk, reset, block_write|byte_w, decOut1b[4], hit, offset, byte_data, inputData, outData4);
-		cache_data DATA_BLOCK_5(clk, reset, block_write|byte_w, decOut1b[5], hit, offset, byte_data, inputData, outData5);
-		cache_data DATA_BLOCK_6(clk, reset, block_write|byte_w, decOut1b[6], hit, offset, byte_data, inputData, outData6);
-		cache_data DATA_BLOCK_7(clk, reset, block_write|byte_w, decOut1b[7], hit, offset, byte_data, inputData, outData7);
+		cache_data DATA_BLOCK_0(clk, reset, memWrite, block_write|byte_w, decOut1b[0], decOutStall, hit, offset, byte_data, inputData, outData0);
+		cache_data DATA_BLOCK_1(clk, reset, memWrite, block_write|byte_w, decOut1b[1], decOutStall, hit, offset, byte_data, inputData, outData1);
+		cache_data DATA_BLOCK_2(clk, reset, memWrite, block_write|byte_w, decOut1b[2], decOutStall, hit, offset, byte_data, inputData, outData2);
+		cache_data DATA_BLOCK_3(clk, reset, memWrite, block_write|byte_w, decOut1b[3], decOutStall, hit, offset, byte_data, inputData, outData3);
+		cache_data DATA_BLOCK_4(clk, reset, memWrite, block_write|byte_w, decOut1b[4], decOutStall, hit, offset, byte_data, inputData, outData4);
+		cache_data DATA_BLOCK_5(clk, reset, memWrite, block_write|byte_w, decOut1b[5], decOutStall, hit, offset, byte_data, inputData, outData5);
+		cache_data DATA_BLOCK_6(clk, reset, memWrite, block_write|byte_w, decOut1b[6], decOutStall, hit, offset, byte_data, inputData, outData6);
+		cache_data DATA_BLOCK_7(clk, reset, memWrite, block_write|byte_w, decOut1b[7], decOutStall, hit, offset, byte_data, inputData, outData7);
 
 		always@(decOut1b or inp_viv or inputData or in_tag or hit or setOut)
 		begin
