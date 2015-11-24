@@ -1,0 +1,916 @@
+# Compile of IM.v was successful.
+vsim -gui work.TopModule
+# vsim -gui work.TopModule 
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+add wave sim:/TopModule/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Ayush  Hostname: DESKTOP-U5NKTU9  ProcessID: 9804
+# 
+#           Attempting to use alternate WLF file "./wlftrbqhfe".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftrbqhfe
+# 
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+force -freeze sim:/TopModule/reset St1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+add wave sim:/TopModule/hazard01/*
+# Compile of final_topModule.v failed with 1 errors.
+# Compile of final_topModule.v failed with 1 errors.
+# Compile of final_topModule.v was successful.
+# Compile of IM.v was successful.
+restart -f
+# Loading work.TopModule
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Warning in wave window restart: (vish-4014) No objects found matching '/TopModule/Result_aluOut'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/TopModule/Result_MemOut'. 
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+add wave sim:/TopModule/fu01/*
+restart -f
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+# Compile of ForwardingUnit.v was successful.
+restart -f
+# Loading work.ForwardingUnit
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+add wave sim:/TopModule/regfile01/*
+restart -f
+# Compile of ForwardingUnit.v was successful.
+force -freeze sim:/TopModule/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/TopModule/reset 1 0
+run
+force -freeze sim:/TopModule/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of final_topModule.v was successful.
+# Compile of IM.v was successful.
+# 2 compiles, 0 failed with no errors. 
+# Load canceled
+vsim -gui work.pipeline_COMP_TestBench
+# vsim -gui work.pipeline_COMP_TestBench 
+# Loading work.pipeline_COMP_TestBench
+# ** Error: (vsim-3033) C:/Users/Ayush/Desktop/Final test/TESTO/final_topModule.v(168): Instantiation of 'pipeline' failed. The design unit was not found.
+# 
+#         Region: /pipeline_COMP_TestBench
+#         Searched libraries:
+#             C:/Users/Ayush/Desktop/Final test/TESTO/work
+# Error loading design
+# Compile of final_topModule.v was successful.
+vsim -gui work.pipeline_COMP_TestBench
+# vsim -gui work.pipeline_COMP_TestBench 
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+# ** Error: (vsim-3063) C:/Users/Ayush/Desktop/Final test/TESTO/final_topModule.v(168): Port 'Result_MemOut' not found in the connected module (3rd connection).
+# 
+#         Region: /pipeline_COMP_TestBench/uut
+# ** Error: (vsim-3063) C:/Users/Ayush/Desktop/Final test/TESTO/final_topModule.v(168): Port 'Result_aluOut' not found in the connected module (4th connection).
+# 
+#         Region: /pipeline_COMP_TestBench/uut
+# Error loading design
+# Compile of final_topModule.v was successful.
+vsim -gui work.pipeline_COMP_TestBench
+# vsim -gui work.pipeline_COMP_TestBench 
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+add wave sim:/pipeline_COMP_TestBench/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Ayush  Hostname: DESKTOP-U5NKTU9  ProcessID: 9804
+# 
+#           Attempting to use alternate WLF file "./wlftkjnics".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftkjnics
+# 
+add wave sim:/pipeline_COMP_TestBench/uut/*
+add wave sim:/pipeline_COMP_TestBench/uut/hazard01/*
+add wave -r sim:/pipeline_COMP_TestBench/uut/fu01/*
+run
+run
+run
+run
+run
+run
+add wave sim:/pipeline_COMP_TestBench/uut/regfile01/*
+restart -f
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+restart -f
+run
+run
+run
+run
+run
+# Compile of adder.v was successful.
+# Compile of alu.v was successful.
+# Compile of CntrlCkt.v was successful.
+# Compile of D_ff.v was successful.
+# Compile of D_ff_normal.v was successful.
+# Compile of data_mem.v was successful.
+# Compile of decoder4to16.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of final_topModule.v was successful.
+# Compile of flag_generator.v was successful.
+# Compile of ForwardingUnit.v was successful.
+# Compile of HazardDetectionUnit.v was successful.
+# Compile of IDEX_pipeline.v was successful.
+# Compile of IFID_pipeline.v was successful.
+# Compile of IM.v was successful.
+# Compile of leftshiftby1.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of mux2to1_3bits.v was successful.
+# Compile of mux2to1_7bits.v was successful.
+# Compile of mux2to1_8bits.v was successful.
+# Compile of mux2to1_9bits.v was successful.
+# Compile of mux2to1_32bits.v was successful.
+# Compile of mux4to1_32bits.v was successful.
+# Compile of mux16to1.v was successful.
+# Compile of register1bit_normal.v was successful.
+# Compile of register3bit_normal.v was successful.
+# Compile of register8bit.v was successful.
+# Compile of register9bit_normal.v was successful.
+# Compile of register16bit_normal.v was successful.
+# Compile of register32bit.v was successful.
+# Compile of register32bit_abnormal.v was successful.
+# Compile of register32bit_normal.v was successful.
+# Compile of registerFile.v was successful.
+# Compile of signExt8to32.v was successful.
+# Compile of signExt11to32.v was successful.
+# Compile of zeroExt8to32.v was successful.
+# Compile of mux8to1_32bits.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of registerSet.v was successful.
+# Compile of FIFO.v was successful.
+# 40 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+add wave sim:/pipeline_COMP_TestBench/uut/dm01/*
+restart -f
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of final_topModule.v was successful.
+restart -f
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+run
+# Compile of IM.v was successful.
+restart
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+restart -f
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run -continue
+add wave sim:/pipeline_COMP_TestBench/uut/cc01/*
+restart -f
+run
+run
+run
+# Compile of adder.v was successful.
+# Compile of alu.v was successful.
+# Compile of CntrlCkt.v was successful.
+# Compile of D_ff.v was successful.
+# Compile of D_ff_normal.v was successful.
+# Compile of data_mem.v was successful.
+# Compile of decoder4to16.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of final_topModule.v was successful.
+# Compile of flag_generator.v was successful.
+# Compile of ForwardingUnit.v was successful.
+# Compile of HazardDetectionUnit.v was successful.
+# Compile of IDEX_pipeline.v was successful.
+# Compile of IFID_pipeline.v was successful.
+# Compile of IM.v was successful.
+# Compile of leftshiftby1.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of mux2to1_3bits.v was successful.
+# Compile of mux2to1_7bits.v was successful.
+# Compile of mux2to1_8bits.v was successful.
+# Compile of mux2to1_9bits.v was successful.
+# Compile of mux2to1_32bits.v was successful.
+# Compile of mux4to1_32bits.v was successful.
+# Compile of mux16to1.v was successful.
+# Compile of register1bit_normal.v was successful.
+# Compile of register3bit_normal.v was successful.
+# Compile of register8bit.v was successful.
+# Compile of register9bit_normal.v was successful.
+# Compile of register16bit_normal.v was successful.
+# Compile of register32bit.v was successful.
+# Compile of register32bit_abnormal.v was successful.
+# Compile of register32bit_normal.v was successful.
+# Compile of registerFile.v was successful.
+# Compile of signExt8to32.v was successful.
+# Compile of signExt11to32.v was successful.
+# Compile of zeroExt8to32.v was successful.
+# Compile of mux8to1_32bits.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of registerSet.v was successful.
+# Compile of FIFO.v was successful.
+# 40 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+run
+run
+run
+run
+run
+# Compile of adder.v was successful.
+# Compile of alu.v was successful.
+# Compile of CntrlCkt.v was successful.
+# Compile of D_ff.v was successful.
+# Compile of D_ff_normal.v was successful.
+# Compile of data_mem.v was successful.
+# Compile of decoder4to16.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of final_topModule.v was successful.
+# Compile of flag_generator.v was successful.
+# Compile of ForwardingUnit.v was successful.
+# Compile of HazardDetectionUnit.v was successful.
+# Compile of IDEX_pipeline.v was successful.
+# Compile of IFID_pipeline.v was successful.
+# Compile of IM.v was successful.
+# Compile of leftshiftby1.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of mux2to1_3bits.v was successful.
+# Compile of mux2to1_7bits.v was successful.
+# Compile of mux2to1_8bits.v was successful.
+# Compile of mux2to1_9bits.v was successful.
+# Compile of mux2to1_32bits.v was successful.
+# Compile of mux4to1_32bits.v was successful.
+# Compile of mux16to1.v was successful.
+# Compile of register1bit_normal.v was successful.
+# Compile of register3bit_normal.v was successful.
+# Compile of register8bit.v was successful.
+# Compile of register9bit_normal.v was successful.
+# Compile of register16bit_normal.v was successful.
+# Compile of register32bit.v was successful.
+# Compile of register32bit_abnormal.v was successful.
+# Compile of register32bit_normal.v was successful.
+# Compile of registerFile.v was successful.
+# Compile of signExt8to32.v was successful.
+# Compile of signExt11to32.v was successful.
+# Compile of zeroExt8to32.v was successful.
+# Compile of mux8to1_32bits.v was successful.
+# Compile of decoder3to8.v was successful.
+# Compile of registerSet.v was successful.
+# Compile of FIFO.v was successful.
+# 40 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.pipeline_COMP_TestBench
+# Loading work.TopModule
+# Loading work.mux4to1_32bits
+# Loading work.register32bit_normal
+# Loading work.D_ff_normal
+# Loading work.adder
+# Loading work.IM_Mem
+# Loading work.decoder4to16
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+# Loading work.IFID_pipeline
+# Loading work.register32bit_abnormal
+# Loading work.register16bit_normal
+# Loading work.signExt8to32
+# Loading work.signExt11to32
+# Loading work.leftshiftby1
+# Loading work.registerFile
+# Loading work.registerSet
+# Loading work.register32bit
+# Loading work.D_ff
+# Loading work.decoder3to8
+# Loading work.mux8to1_32bits
+# Loading work.register1bit_normal
+# Loading work.HazardDetectionUnit
+# Loading work.CntrlCkt
+# Loading work.mux2to1_9bits
+# Loading work.mux2to1_7bits
+# Loading work.IDEX_pipeline
+# Loading work.register9bit_normal
+# Loading work.register3bit_normal
+# Loading work.ForwardingUnit
+# Loading work.alu
+# Loading work.mux2to1_32bits
+# Loading work.mux2to1_3bits
+# Loading work.ex_mem
+# Loading work.register8bit
+# Loading work.mux2to1_8bits
+# Loading work.Mem
+# Loading work.register_Mem
+# Loading work.mux16to1
+# Loading work.zeroExt8to32
+# Loading work.flag_generator
+# Loading work.MEM_WB
+run
+run
+run
+run
+# Compile of HazardDetectionUnit.v was successful.
+restart -f
+# Loading work.HazardDetectionUnit
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+# Compile of ForwardingUnit.v was successful.
+restart -f
+# Loading work.ForwardingUnit
+run
+run
+run
+run
+run
+run
+# Compile of ForwardingUnit.v was successful.
+restart -f
+# Loading work.ForwardingUnit
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+run
+# Compile of IM.v was successful.
+add wave sim:/pipeline_COMP_TestBench/uut/alu01/*
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+# Compile of IM.v was successful.
+restart -f
+# Loading work.IM_Mem
+# Loading work.register_IM_Mem
+# Loading work.D_ff_Mem
+# Loading work.mux16to1_IM
+run
+run
+run
+run
+run
+run
+# Compile of CntrlCkt.v was successful.
+restart -f
+# Loading work.CntrlCkt
+run
+run
+run
+run
+run
+run

@@ -1,0 +1,285 @@
+{C:/Users/Ayush/Desktop/Final test/TESTO/register3bit_normal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register3bit_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register3bit_normal
+
+Top level modules:
+	register3bit_normal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/D_ff_normal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/D_ff_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module D_ff_normal
+
+Top level modules:
+	D_ff_normal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/data_mem.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/data_mem.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register_Mem
+-- Compiling module Mem
+
+Top level modules:
+	Mem
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/adder.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/adder.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/registerSet.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/registerSet.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module registerSet
+
+Top level modules:
+	registerSet
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register32bit_normal.v} {1 {vlog -work work {C:\Users\Ayush\Desktop\Final test\TESTO\register32bit_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register32bit_normal
+
+Top level modules:
+	register32bit_normal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/final_topModule.v} {1 {vlog -work work {C:\Users\Ayush\Desktop\Final test\TESTO\final_topModule.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module TopModule
+-- Compiling module pipeline_COMP_TestBench
+
+Top level modules:
+	pipeline_COMP_TestBench
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/ForwardingUnit.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/ForwardingUnit.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module ForwardingUnit
+
+Top level modules:
+	ForwardingUnit
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register16bit_normal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register16bit_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register16bit_normal
+
+Top level modules:
+	register16bit_normal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_3bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_3bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux2to1_3bits
+
+Top level modules:
+	mux2to1_3bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/decoder3to8.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/decoder3to8.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module decoder3to8
+
+Top level modules:
+	decoder3to8
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register8bit.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register8bit.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register8bit
+
+Top level modules:
+	register8bit
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/leftshiftby1.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/leftshiftby1.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module leftshiftby1
+
+Top level modules:
+	leftshiftby1
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register9bit_normal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register9bit_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register9bit_normal
+
+Top level modules:
+	register9bit_normal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/registerFile.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/registerFile.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module registerFile
+
+Top level modules:
+	registerFile
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/IM.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/IM.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module D_ff_Mem
+-- Compiling module register_IM_Mem
+-- Compiling module IM_Mem
+-- Compiling module mux16to1_IM
+
+Top level modules:
+	IM_Mem
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_32bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_32bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux2to1_32bits
+
+Top level modules:
+	mux2to1_32bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/IDEX_pipeline.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/IDEX_pipeline.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module IDEX_pipeline
+
+Top level modules:
+	IDEX_pipeline
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/MEM_WB.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/MEM_WB.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module MEM_WB
+
+Top level modules:
+	MEM_WB
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/D_ff.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/D_ff.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module D_ff
+
+Top level modules:
+	D_ff
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_7bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_7bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux2to1_7bits
+
+Top level modules:
+	mux2to1_7bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux4to1_32bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux4to1_32bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux4to1_32bits
+
+Top level modules:
+	mux4to1_32bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/flag_generator.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/flag_generator.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module flag_generator
+
+Top level modules:
+	flag_generator
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/HazardDetectionUnit.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/HazardDetectionUnit.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module HazardDetectionUnit
+
+Top level modules:
+	HazardDetectionUnit
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/IFID_pipeline.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/IFID_pipeline.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module IFID_pipeline
+
+Top level modules:
+	IFID_pipeline
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register32bit.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register32bit.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register32bit
+
+Top level modules:
+	register32bit
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/zeroExt8to32.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/zeroExt8to32.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module zeroExt8to32
+
+Top level modules:
+	zeroExt8to32
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_8bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_8bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux2to1_8bits
+
+Top level modules:
+	mux2to1_8bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/alu.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/alu.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_9bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux2to1_9bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux2to1_9bits
+
+Top level modules:
+	mux2to1_9bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/signExt8to32.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/signExt8to32.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module signExt8to32
+
+Top level modules:
+	signExt8to32
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/ex_mem.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/ex_mem.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module ex_mem
+
+Top level modules:
+	ex_mem
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/FIFO.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/FIFO.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module set
+-- Compiling module FIFO
+-- Compiling module FIFO_set
+-- Compiling module register1bit
+-- Compiling module D_ff_normal
+-- Compiling module decoder3to8
+-- Compiling module mux8to1_1bit
+
+Top level modules:
+	FIFO
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/decoder4to16.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/decoder4to16.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module decoder4to16
+
+Top level modules:
+	decoder4to16
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register32bit_abnormal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register32bit_abnormal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register32bit_abnormal
+
+Top level modules:
+	register32bit_abnormal
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux8to1_32bits.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux8to1_32bits.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux8to1_32bits
+
+Top level modules:
+	mux8to1_32bits
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/signExt11to32.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/signExt11to32.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module signExt11to32
+
+Top level modules:
+	signExt11to32
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/mux16to1.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/mux16to1.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module mux16to1
+
+Top level modules:
+	mux16to1
+
+} {} {}} {C:/Users/Ayush/Desktop/Final test/TESTO/register1bit_normal.v} {1 {vlog -work work {C:/Users/Ayush/Desktop/Final test/TESTO/register1bit_normal.v}
+Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+-- Compiling module register1bit_normal
+
+Top level modules:
+	register1bit_normal
+
+} {} {}}
